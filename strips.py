@@ -83,7 +83,7 @@ class STRIPS(SearchDomain):
 
     # list of applicable actions in a given "state"
     def actions(self, state):
-        constants = state_constants(state)
+        constants = self.state_constants(state)
         operators = Operator.__subclasses__()
         actions = []
         for op in operators:
@@ -94,6 +94,19 @@ class STRIPS(SearchDomain):
                 if all(c in state for c in action.pc):
                     actions.append(action)
         return actions
+
+    def assignments(self,args,consts):
+        self.calls += 1
+        if args==[]:
+            return [{}]
+        rec = self.assignments(args[1:],consts)
+        lassign = []
+        for assign in rec:
+            for const in consts:
+                newassign = assign.copy()
+                newassign[args[0]] = const
+                lassign.append(newassign)
+        return lassign
 
     # Result of a given "action" in a given "state"
     # ( returns None, if the action is not applicable in the state)
