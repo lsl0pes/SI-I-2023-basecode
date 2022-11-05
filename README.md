@@ -2,7 +2,7 @@
 
 Comandos para obter actualizações
 
-git remote add upstream git@github.com:lsl0pes/SI-I-2023-basecode.git
+git remote add upstream git@github.com:lsl0pes/SI-I-2023-basecode.git  (só uma vez)
 
 git fetch upstream
 
