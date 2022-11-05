@@ -6,11 +6,11 @@ git remote add upstream git@github.com:lsl0pes/SI-I-2023-basecode.git  (só uma 
 
 git fetch upstream
 
-git checkout master
+git checkout main
 
-git merge upstream/master
+git merge upstream/main
 
- (se necessario: git merge --allow-unrelated-histories upstream/master)
+ (se necessario: git merge --allow-unrelated-histories upstream/main)
 
 
 

@@ -7,51 +7,54 @@ breadth 0 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa'
 1290 1730
 no(Faro,502)
 741 455.67203118032165 8
-Time: 0.04266605600000001
+Time: 0.044373685
 
 -- ## Ex. 3 --------------------------------
 breadth 1 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
 1290 1730
 ('Faro', 502, 739, 0.0, 8)
 ('Guarda', 503, 741, 455.67203118032165, 8)
-Time: 0.043824040999999994
+Time: 0.03747217100000001
 
 -- ## Ex. 4 --------------------------------
 breadth 2 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
 1290 1730
 ('Faro', 502, 739, 0.0, 8)
 ('Guarda', 503, 741, 455.67203118032165, 8)
-Time: 0.03554593299999999
+Time: 0.035725161000000005
 
 -- ## Ex. 5 --------------------------------
 breadth 4 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 18 1
 ('Faro', 17, 706, 0.0, 8)
 True
-Time: 0.0007495760000000018
+Time: 0.0006204900000000013
 
 -- ## Ex. 6 --------------------------------
 IBA* 0 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 84 160
 no(Faro,193)
 Covilha 37 281 425.1176307799995 5
-Time: 0.0044434200000000035
+Time: 0.0044226949999999765
 
 breadth 4 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 17 2
 ('Faro', 17, 706, 0.0, 8)
 14
-Time: 0.0005538539999999925
+Time: 0.0005176570000000047
 
 -- ## Ex. 7 --------------------------------
 IBA* 0 ['Braga', 'Guimaraes', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 53 101
 no(Faro,138)
 Guarda 23 263 455.67203118032165 5
-Time: 0.0026296570000000075
+Time: 0.0025537880000000013
 
 breadth 4 ['Braga', 'Guimaraes', 'Lamego', 'Viseu', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 13 3
 ('Faro', 17, 776, 0.0, 9)
 11
-Time: 0.0004504389999999969
+Time: 0.00044213200000001174
+
+-- ## Ex. 8 --------------------------------
+{Floor(d), Floor(x), Free(c), Free(a), On(e,w), HandFree(), Free(b), On(z,y), On(y,x), On(w,z), Floor(b), On(c,d), On(a,e)}

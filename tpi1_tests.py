@@ -171,3 +171,29 @@ print(t.open_nodes[0])
 print("Time:",time.process_time()-t0)
 
 
+print("\n-- ## Ex. 8 --------------------------------")
+
+
+initial_state = [ Floor('a'), Floor('b'), Floor('d'), Holds('e'), On('c','d'), 
+                  Free('a'), Free('b'), Free('c') ] 
+
+initial_state += [ Floor('x'),On('y','x'),On('z','y'),On('w','z'), Free('w') ]
+
+#    _
+#   / \                      
+#  |  (e)                    |w|
+#  |                         |z|
+#  |                  |c|    |y|
+# _|___|a|____|b|_____|d|____|x|___
+# 
+
+bwdomain = MySTRIPS()
+
+plan = [ Stack.instanciate(['e','b']), Unstack.instanciate(['e','b']), Stack.instanciate(['e','c']), 
+         Pickup.instanciate(['a']), Stack.instanciate(['a','b']), Unstack.instanciate(['e','c']), 
+         Stack.instanciate(['e','w']), Unstack.instanciate(['c','d']), Stack.instanciate(['c','d']), 
+         Unstack.instanciate(['a','b']), Stack.instanciate(['a','e']), Pickup.instanciate(['b']), 
+         Stack.instanciate(['b','a']), Unstack.instanciate(['b','a']), Putdown.instanciate(['b']) ]
+
+print(bwdomain.simulate_plan(initial_state,plan))
+
