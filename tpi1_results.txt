@@ -7,54 +7,54 @@ breadth 0 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa'
 1290 1730
 no(Faro,502)
 741 455.67203118032165 8
-Time: 0.044373685
+Time: 0.046797185
 
 -- ## Ex. 3 --------------------------------
 breadth 1 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
 1290 1730
 ('Faro', 502, 739, 0.0, 8)
 ('Guarda', 503, 741, 455.67203118032165, 8)
-Time: 0.03747217100000001
+Time: 0.041012045999999996
 
 -- ## Ex. 4 --------------------------------
 breadth 2 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
 1290 1730
 ('Faro', 502, 739, 0.0, 8)
 ('Guarda', 503, 741, 455.67203118032165, 8)
-Time: 0.035725161000000005
+Time: 0.034820506
 
 -- ## Ex. 5 --------------------------------
 breadth 4 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 18 1
 ('Faro', 17, 706, 0.0, 8)
-True
-Time: 0.0006204900000000013
+[]
+Time: 0.0005988379999999904
 
 -- ## Ex. 6 --------------------------------
-IBA* 0 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
+A* 0 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 84 160
 no(Faro,193)
 Covilha 37 281 425.1176307799995 5
-Time: 0.0044226949999999765
+Time: 0.004259300999999993
 
-breadth 4 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
+A* 4 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 17 2
 ('Faro', 17, 706, 0.0, 8)
 14
-Time: 0.0005176570000000047
+Time: 0.0005443269999999834
 
 -- ## Ex. 7 --------------------------------
 IBA* 0 ['Braga', 'Guimaraes', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 53 101
 no(Faro,138)
 Guarda 23 263 455.67203118032165 5
-Time: 0.0025537880000000013
+Time: 0.0027872110000000117
 
-breadth 4 ['Braga', 'Guimaraes', 'Lamego', 'Viseu', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
+IBA* 4 ['Braga', 'Guimaraes', 'Lamego', 'Viseu', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
 13 3
 ('Faro', 17, 776, 0.0, 9)
 11
-Time: 0.00044213200000001174
+Time: 0.0004592040000000186
 
 -- ## Ex. 8 --------------------------------
-{Floor(d), Floor(x), Free(c), Free(a), On(e,w), HandFree(), Free(b), On(z,y), On(y,x), On(w,z), Floor(b), On(c,d), On(a,e)}
+{HandFree(), Floor(x), On(y,x), On(a,e), Free(b), Free(a), Free(c), On(w,z), On(z,y), Floor(d), On(c,d), Floor(b), On(e,w)}
