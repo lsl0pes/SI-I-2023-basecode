@@ -1,0 +1,44 @@
+
+-- ## Ex. 1 --------------------------------
+2.6842105263157894
+
+-- ## Ex. 2 --------------------------------
+breadth 0 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
+1290 1730
+no(Faro,502)
+741 455.67203118032165 8
+Time: 0.04462768599999999
+
+-- ## Ex. 3 --------------------------------
+breadth 1 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
+1290 1730
+('Faro', 502, 739, 0.0, 8)
+('Guarda', 503, 741, 455.67203118032165, 8)
+Time: 0.037951909000000006
+
+-- ## Ex. 4 --------------------------------
+breadth 2 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
+1290 1730
+('Faro', 502, 739, 0.0, 8)
+('Guarda', 503, 741, 455.67203118032165, 8)
+Time: 0.03763808900000001
+
+-- ## Ex. 5 --------------------------------
+breadth 4 ['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
+18 1
+('Faro', 17, 706, 0.0, 8)
+True
+Time: 0.0006713559999999841
+
+-- ## Ex. 6 --------------------------------
+IBA* 0 ['Braga', 'Guimaraes', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
+53 101
+no(Faro,138)
+263 455.67203118032165 5
+Time: 0.0026588840000000002
+
+breadth 4 ['Braga', 'Guimaraes', 'Lamego', 'Viseu', 'Coimbra', 'Leiria', 'Santarem', 'Evora', 'Beja', 'Faro']
+17 1
+('Faro', 17, 776, 0.0, 9)
+[]
+Time: 0.0006573459999999753
