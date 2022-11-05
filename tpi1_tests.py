@@ -132,21 +132,42 @@ print("Time:",time.process_time()-t0)
 print("\n-- ## Ex. 6 --------------------------------")
 
 t0 = time.process_time()
+t = MyTree(p,'A*')
+print('IBA*',t.optimize,t.search2())
+print(t.non_terminals,t.terminals)
+print(t.solution)
+node=t.all_nodes[t.open_nodes[0]]
+print(node.state,node.parent,node.cost,node.heuristic,node.depth)
+print("Time:",time.process_time()-t0)
+print()
+
+t0 = time.process_time()
+t = MyTree(p_as_tuple,'A*',optimize=4)
+print('breadth',t.optimize,t.search2())
+print(t.non_terminals,t.terminals)
+print(t.solution)
+print(t.open_nodes[0])
+print("Time:",time.process_time()-t0)
+
+
+print("\n-- ## Ex. 7 --------------------------------")
+
+t0 = time.process_time()
 t = MyTree(p,'IBA*')
 print('IBA*',t.optimize,t.search2())
 print(t.non_terminals,t.terminals)
 print(t.solution)
 node=t.all_nodes[t.open_nodes[0]]
-print(node.cost,node.heuristic,node.depth)
+print(node.state,node.parent,node.cost,node.heuristic,node.depth)
 print("Time:",time.process_time()-t0)
 print()
 
 t0 = time.process_time()
-t = MyTree(p_as_tuple,'IBA*',optimize=4)
+t = MyTree(p_as_tuple,'IBA*',optimize=4,keep=0.05)
 print('breadth',t.optimize,t.search2())
 print(t.non_terminals,t.terminals)
 print(t.solution)
-print(t.open_nodes)
+print(t.open_nodes[0])
 print("Time:",time.process_time()-t0)
 
 
