@@ -154,7 +154,7 @@ print("\n-- ## Ex. 7 --------------------------------")
 
 t0 = time.process_time()
 t = MyTree(p,'IBA*')
-print('IBA*',t.optimize,t.search2())
+print('IBA*',t.optimize,t.search2(),t.keep)
 print(t.non_terminals,t.terminals)
 print(t.solution)
 node=t.all_nodes[t.open_nodes[0]]
@@ -164,11 +164,21 @@ print()
 
 t0 = time.process_time()
 t = MyTree(p_as_tuple,'IBA*',optimize=4,keep=0.05)
-print('IBA*',t.optimize,t.search2())
+print('IBA*',t.optimize,t.search2(),t.keep)
 print(t.non_terminals,t.terminals)
 print(t.solution)
 print(t.open_nodes[0])
 print("Time:",time.process_time()-t0)
+print()
+
+t0 = time.process_time()
+t = MyTree(p_as_tuple,'IBA*',optimize=2,keep=0.15)
+print('IBA*',t.optimize,t.search2(),t.keep)
+print(t.non_terminals,t.terminals)
+print(t.solution)
+print(t.open_nodes[0])
+print("Time:",time.process_time()-t0)
+print()
 
 
 print("\n-- ## Ex. 8 --------------------------------")
